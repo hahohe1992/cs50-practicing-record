@@ -1,0 +1,60 @@
+/* using variable in css => scss */
+// scss是css語法擴充, =css預處理器, 支援variable/nest/inhearitance做法, 大型專案上開發更有效率/彈性
+// browser沒辦法default去讀取，因此要先將scss檔案compile成css才行
+// 補充： https://tw.alphacamp.co/blog/css-preprocessor-sass-scss
+
+// 將scss compile成瀏覽器需要的css檔
+// sass variable.scss:variable.css
+// 讓sass監控指定檔案，發現有更改時直接compile
+// sass --watch variable.scss:variable.css
+
+// scss variable
+$color: red;
+
+ol {
+  font-size: 20px;
+  color: $color;
+}
+
+ul {
+  font-size: 15px;
+  color: $color;
+}
+
+// scss nest
+div {
+  font-size: 18px;
+
+  p {
+    color: blue;
+  }
+
+  ul {
+    color: green;
+  }
+}
+
+%message {
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid black;
+  padding: 20px;
+  margin: 20px;
+}
+
+// scss inherientance
+.success {
+  @extend %message;
+  background-color: green;
+}
+
+.warning {
+  @extend %message;
+  background-color: orange;
+}
+
+.error {
+  @extend %message;
+  background-color: red;
+}

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+  <title>html practice notes</title>
+  <!-- viewport: responsive design -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <!-- style tag for css/cascading style sheets -->
+  <style>
+    h2{
+      color: blue;
+      text-align: center;
+    }
+  </style>
+  <!-- import styles.css with link tag -->
+  <!-- rel/relation attritube: relationship with the page -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- import builded scss file -->
+  <link rel="stylesheet" href="variable.css">
+
+  <!-- include bootstrap library -->
+  <!-- bootstrap: css library, 不必自己寫style，可以用他寫好的版本 -->
+  <!-- document: https://getbootstrap.com/docs/5.2/getting-started/introduction/ -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</header>
+
+<body>
+  <!-- without tags -->
+  Hello, world!
+
+  <!-- heading tags, only till h6 -->
+  <!-- style attritube: css style for this specific tag -->
+  <h1 style="color: aqua">Hello Heading1</h1>
+  <h2>Hello Heading2</h2>
+  <h3>Heading3</h3>
+  <h3 id="foo">Heading3</h3>
+  <h4 id="bar">Heading4</h4>
+  <h5 class="baz">Heading5</h5>
+  <h6 class="baz">Heading6</h6>
+  <h6>Heading6</h6>
+
+  <!-- ordered list -->
+  <ol>
+    <!-- list items -->
+    <li>list 1</li>
+    <li>list 2</li>
+    <li>list 3</li>
+  </ol>
+  <!-- unordered list -->
+  <ul>
+    <!-- list items -->
+    <li>list a</li>
+    <li>list b</li>
+    <li>list c</li>
+  </ul>
+
+  <!-- image tag-->
+  <!-- src/source attritube: specific which picture-->
+  <!-- alt/alternative attritube: when src picture not able to be loaded -->
+  <!-- width attritube: for fixed the imgage width -->
+  <img src="cat.png" alt="meow" width="300">
+
+  <!-- a tag with href attritube: create a link -->
+  <a href="http://google.com">Click me to go to google</a>
+
+  <!-- table tag -->
+  <table>
+    <!-- table head -->
+    <thead>
+      <!-- table row -->
+      <tr>
+        <!-- table head data -->
+        <th>Ocean</th>
+        <th>Average Depth</th>
+        <th>Maxium Depth</th>
+      </tr>
+    </thead>
+    <!-- table body -->
+    <tbody>
+      <!-- table row -->
+      <tr>
+        <!-- table data -->
+        <td>Pacific Ocean</td>
+        <td>4,280 m</td>
+        <td>10,911 m</td>
+      </tr>
+      <tr>
+        <td>Atlantic Ocean</td>
+        <td>3,646 m</td>
+        <td>8,486 m</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- form tag: provide user to input data -->
+  <form>
+    <!-- input tag to specific a input field -->
+    <!-- type attritube: specific the type of this input area -->
+    <!-- placeholder attritube: as a input hint -->
+    <!-- name attritube: give this tag an id for later usage -->
+    <input type="text" placeholder="Full Name" name="full_name">
+    <!-- input tag to specific a submit field -->
+    <input type="submit">
+  </form>
+
+  <!-- different type of forms -->
+  <form>
+    <!-- div tag: division -->
+    <div>
+      <input name="name" type="text" placeholder="Name">
+      <input name="password" type="password" placeholder="Password">
+    </div>
+
+    <div>
+      Favorite Color Is?
+      <input name="color" type="radio" value="red"> Red
+      <input name="color" type="radio" value="green"> Green
+      <input name="color" type="radio" value="blue"> Blue
+      <input name="color" type="radio" value="other"> Other
+    </div>
+
+    <div>
+      <input name="country" list="countries" placeholder="Country">
+      <datalist id="countries">
+        <option value="Afghanistan">123</option>
+        <option value="Albania"></option>
+        <option value="B"></option>
+        <option value="C"></option>
+        <option value="D"></option>
+      </datalist>
+    </div>
+  </form>
+
+  <!-- css selectors notes -->
+  <div>
+    <table>
+      <tr>
+        <td>a, b</td>
+        <td>multiple element selector</td>
+      </tr>
+      <tr>
+        <td>a b</td>
+        <td>descendant selector</td>
+      </tr>
+      <tr>
+        <td>a > b</td>
+        <td>child selector</td>
+      </tr>
+      <tr>
+        <td>a + b</td>
+        <td>adjacent sibling selector</td>
+      </tr>
+      <tr>
+        <td>[a=b]</td>
+        <td>attribute selector</td>
+      </tr>
+      <tr>
+        <td>a:b</td>
+        <td>pseudoclass selector</td>
+      </tr>
+      <tr>
+        <td>a::b</td>
+        <td>pseudoelement selector</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- example for descendant selector -->
+  <div>
+    <ol>
+      <li>list item 1</li>
+      <li>list item 2</li>
+      <ul>
+        <li>sublist item 1</li>
+        <li>sublist item 2</li>
+        <li>sublist item 3</li>
+      </ul>
+      <li>list item 3</li>
+      <li>list item 4</li>
+    </ol>
+  </div>
+
+  <!-- example for attribute selector -->
+  <div>
+    <ul>
+      <li><a href="https://google.com">Google</a></li>
+      <li><a href="https://facebook.com">Facebook</a></li>
+      <li><a href="https://amazon.com">Amazon</a></li>
+    </ul>
+  </div>
+
+  <!-- example for pseudoclass selector -->
+  <button>Click Me</button>
+
+  <!-- flexbox practice  -->
+  <div id="container">
+    <div>1. This is some sample text inside of a div to demo Flexbox</div>
+    <div>2. This is some sample text inside of a div to demo Flexbox</div>
+    <div>3. This is some sample text inside of a div to demo Flexbox</div>
+    <div>4. This is some sample text inside of a div to demo Flexbox</div>
+    <div>5. This is some sample text inside of a div to demo Flexbox</div>
+    <div>6. This is some sample text inside of a div to demo Flexbox</div>
+    <div>7. This is some sample text inside of a div to demo Flexbox</div>
+    <div>8. This is some sample text inside of a div to demo Flexbox</div>
+    <div>9. This is some sample text inside of a div to demo Flexbox</div>
+    <div>10.This is some sample text inside of a div to demo Flexbox</div>
+    <div>11.This is some sample text inside of a div to demo Flexbox</div>
+  </div>
+
+  <!-- grid practice -->
+  <div id="grid">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+    <div class="grid-item">7</div>
+    <div class="grid-item">8</div>
+  </div>
+
+  <!-- using class from boostrap -->
+  <div class="alert alert-success" role="alert">
+    A simple success yeee alert!
+  </div>
+  <div class="alert alert-danger" role="alert">
+    A simple danger wooo alert!
+  </div>
+
+  <!-- boostrap columns: 12 column units -->
+  <div class="container">
+    <div class="row">
+      <div class="col-3">data 1</div>
+      <div class="col-3">data 2</div>
+      <div class="col-3">data 3</div>
+      <div class="col-3">data 4</div>
+    </div>
+    <div class="row">
+      <div class="col-3">data 1</div>
+      <div class="col-6">data 2</div>
+      <div class="col-3">data 3</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-sm-6">column 1</div>
+      <div class="col-lg-3 col-sm-6">column 2</div>
+      <div class="col-lg-3 col-sm-6">column 3</div>
+      <div class="col-lg-3 col-sm-6">column 4</div>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Google Search</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<!-- project要求：
+    1. google搜尋頁名稱須為index.html
+    2. 右上角要包含兩個轉頁按鈕「google高級搜索」和「google圖片搜索」分別導向另外兩個自己刻的html
+       另外兩頁的右上角都應有「返回google搜索」的轉頁連結
+    3. 所有搜索畫面需和google自己的畫面UI一致
+    4. 圖片搜索按下後需導向該詞的圖片搜索結果
+    5. 高級搜索頁面應包含:查找帶有「所有這些詞」、「確切的單詞或短語」、「任和這些詞」、「沒有這些詞」，且按下搜索按鈕後會導向該搜索結果
+  -->
+<!-- google首頁包含：
+    1. logo偏上置中
+    2. 搜尋橢圓框在畫面中央
+    3. 搜尋框下方兩個按鈕，分別是：「google搜尋」和「好手氣」
+  -->
+
+<body>
+  <div>
+    <button><a href="image-search.html">Click for Image Search</a></button>
+    <button><a href="advanced-search.html">Click for Advance Search</a></button>
+  </div>
+  <div>
+    <image src="google-logo.png" alt="search-icon"></image>
+  </div>
+  <div>
+    <form action="https://www.google.com/search">
+      <input class="form-control" type="text" placeholder="type your words here" aria-label="input" name="q">
+      <input type="submit" value="Google Search">
+      <input type="submit" value="I’m Feeling Lucky">
+    </form>
+  </div>
+</body>
+
+</html>

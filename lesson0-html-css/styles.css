@@ -1,0 +1,139 @@
+/* selector: all element fits in this style */
+* {
+  font-family: sans-serif;
+}
+
+/* element selector: specific styles for specific tags */
+h3 {
+  color: green;
+  text-align: right;
+}
+
+div {
+  background-color: orange;
+  width: auto;
+  height: auto;
+  /* padding: 5px;
+  margin: 10px; */
+  border: 3px solid black;
+}
+
+input {
+  font-family: Arial;
+  font-size: 12px;
+}
+
+table {
+  border: 1px solid green;
+  border-collapse: collapse;
+}
+
+/* multiple element selector */
+th,
+td {
+  border: 1px solid gray;
+  padding: 5px;
+}
+
+/* id selector */
+#foo,
+#bar {
+  color: red;
+}
+
+/* class selector */
+.baz {
+  color: pink;
+}
+
+/* css specificity 權重 */
+/* 1. inline */
+/* 2. id */
+/* 3. class */
+/* 4. type */
+
+/* descendant selector */
+ol ul li {
+  color: rebeccapurple;
+}
+
+/* attritube selector */
+a {
+  color: blue;
+}
+
+a[href="https://facebook.com"] {
+  color: brown;
+}
+
+/* pseudoclass selector */
+button {
+  width: 200px;
+  height: 50px;
+  font-size: 24px;
+  background-color: green;
+}
+
+button:hover {
+  background-color: orangered;
+}
+
+/* responsive design */
+/*
+  響應式設計：透過不同設備查看網站看都不會跑版
+  不同方式達到響應式設計
+
+  - viewport
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  - media queries
+  = media types: print, screen, ...
+  = media features: height, width, orientation, ...
+ @media (min-width: 600px) {
+   body {
+    background-color: lightblue;
+   }
+ }
+ @media (max-width: 599px) {
+   body {
+     background-color: lightcoral;
+   }
+ }
+ */
+
+/*
+  - flexbox
+    automatically change to another line when there's no enough space
+*/
+#container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#container>div {
+  background-color: springgreen;
+  font-size: 20px;
+  margin: 15px;
+  padding: 15px;
+  width: 200px;
+}
+
+/*
+  - grids
+
+*/
+#grid {
+  background-color: green;
+  display: grid;
+  padding: 20px;
+  grid-column: 20px;
+  grid-row-gap: 10px;
+  grid-template-columns: 200px 200px auto;
+}
+
+.grid-item {
+  background-color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
