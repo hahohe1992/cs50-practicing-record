@@ -4,3 +4,16 @@ $google-blue: #4285f4;
 $google-green: #34a853;
 $google-yellow: #fbbc05;
 $google-red: #ea4335;
+
+body {
+  font-family: Roboto, Helvetica Neue, Arial, sans-serif;
+  font-size: 10pt;
+}
+
+image {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  width: auto;
+}

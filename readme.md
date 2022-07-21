@@ -11,4 +11,5 @@ this repository is going to record my notes and projects during the lesson (CS50
 
 - lesson1-git
 
-
+- lesson2-python
+  notes and self practicing.
